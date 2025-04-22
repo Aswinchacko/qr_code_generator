@@ -9,7 +9,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [qrSize, setQrSize] = useState(256)
   const [logo, setLogo] = useState(null)
-  const [logoSize, setLogoSize] = useState(30)
   const qrRef = useRef(null)
   const fileInputRef = useRef(null)
 
@@ -132,21 +131,6 @@ function App() {
               </button>
             )}
           </div>
-          {logo && (
-            <div className="logo-size-control">
-              <label>
-                Logo Size:
-                <input 
-                  type="range" 
-                  min="20" 
-                  max="35"
-                  value={logoSize} 
-                  onChange={(e) => setLogoSize(parseInt(e.target.value))}
-                />
-                <span>{logoSize}%</span>
-              </label>
-            </div>
-          )}
         </div>
 
         <div className="size-control">
@@ -178,8 +162,8 @@ function App() {
                 <div 
                   className="logo-overlay"
                   style={{
-                    width: `${(logoSize / 100) * qrSize}px`,
-                    height: `${(logoSize / 100) * qrSize}px`,
+                    width: `${qrSize * 0.25}px`,
+                    height: `${qrSize * 0.25}px`,
                     padding: '8px',
                     backgroundColor: 'white',
                   }}

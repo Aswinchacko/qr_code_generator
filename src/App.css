@@ -281,44 +281,6 @@ h1 {
   transform: translateY(-1px);
 }
 
-.logo-size-control {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.logo-size-control label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.logo-size-control input[type="range"] {
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  background: var(--border-color);
-  outline: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-}
-
-.logo-size-control input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.logo-size-control input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-}
-
 .qr-wrapper {
   position: relative;
   display: flex;
